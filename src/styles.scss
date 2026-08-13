@@ -5,6 +5,9 @@ $blue-border: #2196f3;
 
 .header-navbar {
   background-color: $bg-color;
+  position: sticky;
+    top: 0;
+    z-index: 999;
 
   .logo-text {
     line-height: 1;
