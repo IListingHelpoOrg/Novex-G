@@ -1,0 +1,170 @@
+.sidenav-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  color: var(--text-secondary);
+  box-sizing: border-box;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 8px 28px 8px;
+}
+
+.brand-title {
+  color: var(--text-primary);
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.section-header {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  color: var(--text-muted);
+  margin: 20px 0 10px 8px;
+}
+
+.nav-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  padding: 10px 12px;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.nav-item:hover {
+  background-color: var(--bg-muted);
+  color: var(--text-primary);
+}
+
+.item-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.chevron-icon {
+  font-style: normal;
+  font-size: 18px;
+  transform: rotate(90deg);
+  opacity: 0.6;
+}
+
+
+.logout-section {
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logout-btn {
+  color: #ff6b6b;
+}
+
+.logout-btn:hover {
+  background-color: rgba(255, 107, 107, 0.1);
+  color: #ff5252;
+}
+
+/* Modal text dark mode fix for Bootstrap dialogs */
+.modal-content {
+  color: var(--text-primary);
+}
+
+.brand-short {
+  display: none;
+}
+
+.nav-icon {
+  flex: 0 0 18px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.is-collapsed {
+  .brand-full,
+  .nav-label,
+  .chevron-icon {
+    display: none;
+  }
+
+  .brand-short {
+    display: inline;
+  }
+
+  .brand,
+  .nav-item,
+  .item-left {
+    justify-content: center;
+  }
+
+  .brand {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .nav-item {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .accordion-collapse {
+    display: none !important;
+  }
+}
+
+.accordion-button::after {
+    display: none !important;
+}
+
+.accordion-button::after {
+  display: none !important;
+}
+
+.chevron-icon {
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  opacity: 0.6;
+  margin-left: auto;
+  transition: transform 0.25s ease;
+}
+
+.accordion-button:not(.collapsed) .chevron-icon {
+  transform: rotate(90deg);
+}
+
+.sub-menu {
+  display: flex;
+  flex-direction: column;
+  padding-left: 36px;
+  padding-top: 4px;
+  gap: 4px;
+}
+
+.sub-item {
+  color: #a0aec0;
+  text-decoration: none;
+  font-size: 13px;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.sub-item:hover, .sub-item.active {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.08);
+}

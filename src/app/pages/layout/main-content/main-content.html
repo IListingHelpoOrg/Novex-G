@@ -1,0 +1,10 @@
+<div class="app-container" [class.collapsed]="layoutService.isCollapsed()">
+  <app-side-nav class="app-sidenav"></app-side-nav>
+
+  <div class="main-wrapper">
+    <app-nav class="app-header"></app-nav>
+    <main class="content-area">
+      <router-outlet></router-outlet>
+    </main>
+  </div>
+</div>

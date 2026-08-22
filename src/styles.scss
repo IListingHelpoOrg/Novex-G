@@ -3,11 +3,198 @@ $text-dark: #1e293b;
 $blue-primary: #0088ff;
 $blue-border: #2196f3;
 
+/* Base Light Variables */
+:root {
+  --bg-main: #f4f6f9;
+  --bg-card: #ffffff;
+  --bg-header: #ffffff;
+  --bg-input: #ffffff;
+  --bg-muted: #f8fafc;
+  --text-primary: #1f2937;
+  --text-secondary: #64748b;
+  --text-muted: #94a3b8;
+  --border-color: #e2e8f0;
+  --btn-text: #1f2937;
+  --focus-color: #2563eb;
+}
+
+/* Dark Theme Overrides applied via <html> class */
+html.dark-theme {
+  --bg-main: #0f172a;
+  --bg-card: #1e293b;
+  --bg-header: #1b253e;
+  --bg-input: #162033;
+  --bg-muted: #243247;
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+  --border-color: #334155;
+  --btn-text: #f8fafc;
+  --focus-color: #60a5fa;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button,
+.btn,
+a {
+  color: var(--btn-text);
+}
+
+.card,
+.list-group-item,
+.table,
+.dropdown-menu,
+.modal-content {
+  --bs-card-bg: var(--bg-card);
+  --bs-body-bg: var(--bg-card);
+  --bs-body-color: var(--text-primary);
+  background-color: var(--bg-card);
+  color: var(--text-primary);
+  border-color: var(--border-color) !important;
+}
+
+.text-dark,
+.text-body,
+.text-secondary,
+.form-label,
+.form-text,
+small,
+th,
+td {
+  color: var(--text-secondary) !important;
+}
+
+h1, h2, h3, h4, h5, h6,
+.fw-bold,
+.fw-semibold,
+.fw-medium {
+  color: var(--text-primary);
+}
+
+input,
+select,
+textarea,
+.form-control,
+.form-select {
+  background-color: var(--bg-input);
+  color: var(--text-primary);
+  border-color: var(--border-color);
+}
+
+input::placeholder,
+textarea::placeholder,
+.form-control::placeholder {
+  color: var(--text-muted);
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+.form-control:focus,
+.form-select:focus {
+  background-color: var(--bg-input);
+  color: var(--text-primary);
+  border-color: var(--focus-color);
+}
+
+.btn-light,
+.btn-white,
+.bg-light {
+  background-color: var(--bg-muted) !important;
+  color: var(--text-primary) !important;
+  border-color: var(--border-color) !important;
+}
+
+.btn-outline-secondary,
+.btn-outline-primary {
+  color: var(--focus-color);
+}
+
+.dropdown-item {
+  color: var(--text-primary);
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+  background-color: var(--bg-muted);
+  color: var(--text-primary);
+}
+
+.btn-close {
+  filter: var(--btn-close-filter, none);
+}
+
+html.dark-theme {
+  --btn-close-filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+html.dark-theme .border,
+html.dark-theme .border-bottom,
+html.dark-theme .border-top {
+  border-color: var(--border-color) !important;
+}
+
+html.dark-theme .landing-main {
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+}
+
+html.dark-theme .landing-main p,
+html.dark-theme .landing-main li,
+html.dark-theme .landing-main label,
+html.dark-theme .landing-main .section-subtitle,
+html.dark-theme .landing-main .hero-subtitle,
+html.dark-theme .landing-main .text-muted {
+  color: var(--text-secondary) !important;
+}
+
+html.dark-theme .landing-main .hero-card,
+html.dark-theme .landing-main .accordion-item,
+html.dark-theme .landing-main .accordion-button,
+html.dark-theme .landing-main .bg-light-blue {
+  background-color: var(--bg-card) !important;
+  color: var(--text-primary) !important;
+  border-color: var(--border-color) !important;
+}
+
+/* The side-nav host is a child component, so its responsive width belongs globally. */
+.app-sidenav {
+  display: block;
+  width: 260px;
+  flex: 0 0 260px;
+  background-color: var(--bg-header);
+  overflow: hidden;
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1), flex-basis 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.app-container.collapsed .app-sidenav {
+  width: 70px;
+  flex-basis: 70px;
+}
+
+.btn {
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.card {
+  background-color: var(--bg-card);
+
+  span,
+  h3, h6 {
+    color: var(--text-primary);
+  }
+}
+
 .header-navbar {
   background-color: $bg-color;
   position: sticky;
-    top: 0;
-    z-index: 999;
+  top: 0;
+  z-index: 999;
 
   .logo-text {
     line-height: 1;
