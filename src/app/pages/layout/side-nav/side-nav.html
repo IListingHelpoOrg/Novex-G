@@ -10,86 +10,17 @@
   </div>
 
   <nav class="nav-menu" id="sidenavAccordion">
-    <div class="nav-group">
-      <button class="nav-item has-dropdown" [routerLink]="['/dashboard']">
-        <span class="item-left">
-          <i class="bi bi-grid-1x2-fill nav-icon"></i>
-          <span class="nav-label">Dashboards</span>
-        </span>
-      </button>
-    </div>
-
-    <div class="nav-group">
-      <button class="nav-item has-dropdown" [routerLink]="['/settings']">
-        <span class="item-left">
-          <i class="bi bi-gear-fill nav-icon"></i>
-          <span class="nav-label">Settings</span>
-        </span>
-      </button>
-    </div>
-
-    <div class="nav-group accordion-item bg-transparent border-0">
-
-      <button class="nav-item has-dropdown accordion-button collapsed shadow-none bg-transparent" type="button"
-        data-bs-toggle="collapse" data-bs-target="#appsSubmenu" aria-expanded="false" aria-controls="appsSubmenu">
-
-        <span class="item-left">
-          <i class="bi bi-grid-fill nav-icon"></i>
-          <span class="nav-label">Apps</span>
-        </span>
-
-        <i class="chevron-icon">›</i>
-      </button>
-
-      <div id="appsSubmenu" class="accordion-collapse collapse" data-bs-parent="#sidenavAccordion">
-
-        <div class="sub-menu">
-          <a class="sub-item" [routerLink]="['/apps/chat']" routerLinkActive="active">
-            Chat App
-          </a>
-
-          <a class="sub-item" [routerLink]="['/apps/ecommerce']" routerLinkActive="active">
-            E-Commerce
-          </a>
-
-          <a class="sub-item" [routerLink]="['/apps/email']" routerLinkActive="active">
-            Email
-          </a>
-        </div>
-
+    @for (item of menuItems; track item.route) {
+      <div class="nav-group">
+        <button class="nav-item has-dropdown" [routerLink]="[item.route]">
+          <span class="item-left">
+            <i class="bi {{ item.icon }} nav-icon"></i>
+            <span class="nav-label">{{ item.label }}</span>
+          </span>
+        </button>
       </div>
-    </div>
+    }
 
-    <div class="nav-group">
-      <button class="nav-item has-dropdown accordion-button collapsed shadow-none bg-transparent" type="button"
-       data-bs-toggle="collapse" data-bs-target="#app2Submenu" aria-expanded="false" aria-controls="app2Submenu">
-        <span class="item-left">
-          <i class="bi bi-diagram-3-fill nav-icon"></i>
-          <span class="nav-label">Nested Menu</span>
-        </span>
-        <i class="chevron-icon">›</i>
-      </button>
-
-      <div id="app2Submenu" class="accordion-collapse collapse" data-bs-parent="#sidenavAccordion">
-
-        <div class="sub-menu">
-          <a class="sub-item" [routerLink]="['/apps/chat']" routerLinkActive="active">
-            Chat App
-          </a>
-
-          <a class="sub-item" [routerLink]="['/apps/ecommerce']" routerLinkActive="active">
-            E-Commerce
-          </a>
-
-          <a class="sub-item" [routerLink]="['/apps/email']" routerLinkActive="active">
-            Email
-          </a>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- <div class="section-header" (click)="openLogoutModal()">Logout</div> -->
     <div class="logout-section">
       <button class="nav-item logout-btn" (click)="openLogoutModal()">
         <span class="item-left">
