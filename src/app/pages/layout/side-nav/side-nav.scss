@@ -1,10 +1,37 @@
 .sidenav-container {
   height: 100%;
+  min-height: 0;
   display: flex;
   flex-direction: column;
   padding: 16px;
   color: var(--text-secondary);
   box-sizing: border-box;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-width: none;
+  scrollbar-color: transparent transparent;
+}
+
+.sidenav-container:hover {
+  scrollbar-width: thin;
+  scrollbar-color: var(--text-muted) transparent;
+}
+
+.sidenav-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidenav-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidenav-container::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 999px;
+}
+
+.sidenav-container:hover::-webkit-scrollbar-thumb {
+  background: var(--text-muted);
 }
 
 .brand {
@@ -96,14 +123,17 @@
   flex: 0 0 18px;
   font-size: 18px;
   text-align: center;
+  opacity: 1;
+  visibility: visible;
 }
 
 .is-collapsed {
   .brand-full,
   .nav-label,
   .chevron-icon {
-    opacity: 0;
-    visibility: hidden;
+    // opacity: 0;
+    // visibility: hidden;
+    display: none;
   }
 
   .brand-short {
@@ -118,14 +148,44 @@
     justify-content: center;
   }
 
+  .nav-menu {
+    gap: 8px;
+  }
+
+  .nav-group,
+  .logout-section {
+    display: flex;
+    justify-content: center;
+  }
+
   .brand {
     padding-left: 0;
     padding-right: 0;
   }
 
   .nav-item {
+    width: 42px;
+    height: 42px;
     padding-left: 8px;
     padding-right: 8px;
+    padding-top: 0;
+    padding-bottom: 0;
+    min-height: 42px;
+  }
+
+  .item-left {
+    width: 18px;
+    gap: 0;
+  }
+
+  .nav-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    opacity: 1;
+    visibility: visible;
   }
 
   .accordion-collapse {
