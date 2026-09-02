@@ -1,0 +1,63 @@
+ <div class="dashboard-card p-4 p-sm-5 mb-5" style="background: #121212; border-radius: 16px; max-width: 600px;">
+            <form id="transfer-fund-form">
+                <div class="row g-4">
+                    <!-- Balance Amount -->
+                    <div class="col-12">
+                        <label class="form-label text-white-50 fw-medium mb-2">
+                            Balance Amount <span class="text-danger">*</span>
+                        </label>
+                        <input type="text" class="form-control form-control-lg custom-dark-input fw-semibold"
+                            value="$0.00" readonly style="color: #ffffff !important;">
+                    </div>
+
+                    <!-- User ID -->
+                    <div class="col-12">
+                        <label class="form-label text-white-50 fw-medium mb-2">User ID</label>
+                        <input type="text" class="form-control form-control-lg custom-dark-input"
+                            placeholder="Enter User ID">
+                    </div>
+
+                    <!-- Name -->
+                    <div class="col-12">
+                        <label class="form-label text-white-50 fw-medium mb-2">Name</label>
+                        <input type="text" class="form-control form-control-lg custom-dark-input"
+                            placeholder="User Name" readonly>
+                    </div>
+
+                    <!-- Select Amount -->
+                    <div class="col-12">
+                        <label class="form-label text-white-50 fw-medium mb-2">
+                            Select Amount <span class="text-danger">*</span>
+                        </label>
+                        <input type="number" class="form-control form-control-lg custom-dark-input"
+                            placeholder="Enter or select amount" required>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="col-12 mt-4 d-flex gap-3">
+                        <button type="submit" class="btn btn-proceed px-4 py-2 fw-semibold text-white">Proceed</button>
+                        <button type="button" class="btn btn-cancel px-4 py-2 fw-semibold text-white">Cancel</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!-- Bottom Section: History Log Table -->
+        <div class="dashboard-card p-4" style="background: #121212; border-radius: 16px;">
+            <div class="table-responsive">
+                <table class="table table-dark table-custom mb-0 align-middle">
+                    <thead>
+                        <tr class="text-white-50 border-bottom border-secondary">
+                            <th class="p-3 text-uppercase fw-bold tracking-wider fs-7">Date_Entry</th>
+                            <th class="p-3 text-uppercase fw-bold tracking-wider fs-7">Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-bottom border-dark-subtle">
+                            <td class="p-3 text-white-50">7/16/2026 5:48:23 PM</td>
+                            <td class="p-3 fw-semibold text-white">50.00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>

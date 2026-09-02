@@ -14,6 +14,10 @@ $blue-border: #2196f3;
   --text-secondary: #64748b;
   --text-muted: #94a3b8;
   --border-color: #e2e8f0;
+  --text-on-accent: #ffffff;
+  --surface-strong: #ffffff;
+  --surface-hover: #eef4ff;
+  --danger-color: #dc2626;
   --btn-text: #1f2937;
   --focus-color: #2563eb;
 }
@@ -29,6 +33,10 @@ html.dark-theme {
   --text-secondary: #cbd5e1;
   --text-muted: #94a3b8;
   --border-color: #334155;
+  --text-on-accent: #ffffff;
+  --surface-strong: #0b1220;
+  --surface-hover: #293852;
+  --danger-color: #f87171;
   --btn-text: #f8fafc;
   --focus-color: #60a5fa;
 }
@@ -162,6 +170,31 @@ html.dark-theme .landing-main .bg-light-blue {
   border-color: var(--border-color) !important;
 }
 
+html.dark-theme .landing-main .platform-section,
+html.dark-theme .landing-main .features-section,
+html.dark-theme .landing-main .roadmap-section,
+html.dark-theme .landing-main .faq-section,
+html.dark-theme .landing-main .contact-section,
+html.dark-theme .landing-main .social-icon,
+html.dark-theme .landing-main .node,
+html.dark-theme .landing-main .progress-custom,
+html.dark-theme .landing-main .section-card,
+html.dark-theme .landing-main .feature-card {
+  background-color: var(--bg-card) !important;
+  color: var(--text-primary) !important;
+  border-color: var(--border-color) !important;
+}
+
+html.dark-theme .landing-main .hero-title,
+html.dark-theme .landing-main .platform-title,
+html.dark-theme .landing-main .video-title,
+html.dark-theme .landing-main .feature-title,
+html.dark-theme .landing-main .roadmap-title,
+html.dark-theme .landing-main .contact-title,
+html.dark-theme .text-muted {
+  color: var(--text-primary) !important;
+}
+
 /* The side-nav host is a child component, so its responsive width belongs globally. */
 .app-sidenav {
   display: block;
@@ -247,4 +280,42 @@ html.dark-theme .landing-main .bg-light-blue {
       color: #ffffff;
     }
   }
+}
+
+/* Normalize Bootstrap utility classes so component pages follow the active theme. */
+.table-dark,
+.table-dark > :not(caption) > *,
+.bg-dark,
+.bg-black,
+.custom-dark-input {
+  --bs-table-bg: var(--bg-card);
+  --bs-table-color: var(--text-primary);
+  background-color: var(--bg-card) !important;
+  color: var(--text-primary) !important;
+  border-color: var(--border-color) !important;
+}
+
+.text-white,
+.text-white-50 {
+  color: var(--text-primary) !important;
+}
+
+.border-dark,
+.border-dark-subtle,
+.border-secondary {
+  border-color: var(--border-color) !important;
+}
+
+.dashboard-card[style*="#121212"] {
+  background-color: var(--bg-card) !important;
+  border: 1px solid var(--border-color);
+}
+
+html.dark-theme .table-dark,
+html.dark-theme .table-dark > :not(caption) > *,
+html.dark-theme .bg-dark,
+html.dark-theme .bg-black,
+html.dark-theme .custom-dark-input,
+html.dark-theme .dashboard-card[style*="#121212"] {
+  background-color: var(--surface-strong) !important;
 }

@@ -1,0 +1,99 @@
+<div class="dashboard-card p-4 p-sm-5" style="background: #121212; border-radius: 16px;">
+
+            <!-- Level Picker Radio Toolbar -->
+            <div class="level-radio-container mb-4 d-flex flex-wrap gap-3 align-items-center">
+                <!-- Dynamically generated levels 1 to 16 -->
+                <div class="form-check form-check-inline custom-level-radio">
+                    <input class="form-check-input" type="radio" name="levelSelect" id="level1" value="1" checked>
+                    <label class="form-check-label text-white" for="level1">1</label>
+                </div>
+                <!-- Repeatable blocks for remaining levels -->
+                <div class="form-check form-check-inline custom-level-radio" psychology-loop-placeholder>
+                    <input class="form-check-input" type="radio" name="levelSelect" id="level2" value="2">
+                    <label class="form-check-label text-white-50" for="level2">2</label>
+                </div>
+                <div class="form-check form-check-inline custom-level-radio">
+                    <input class="form-check-input" type="radio" name="levelSelect" id="level3" value="3">
+                    <label class="form-check-label text-white-50" for="level3">3</label>
+                </div>
+                <div class="form-check form-check-inline custom-level-radio">
+                    <input class="form-check-input" type="radio" name="levelSelect" id="level4" value="4">
+                    <label class="form-check-label text-white-50" for="level4">4</label>
+                </div>
+                <div class="form-check form-check-inline custom-level-radio">
+                    <input class="form-check-input" type="radio" name="levelSelect" id="level5" value="5">
+                    <label class="form-check-label text-white-50" for="level5">5</label>
+                </div>
+                <div class="form-check form-check-inline custom-level-radio">
+                    <input class="form-check-input" type="radio" name="levelSelect" id="level6" value="6">
+                    <label class="form-check-label text-white-50" for="level6">6</label>
+                </div>
+                <div class="form-check form-check-inline custom-level-radio">
+                    <input class="form-check-input" type="radio" name="levelSelect" id="level7" value="7">
+                    <label class="form-check-label text-white-50" for="level7">7</label>
+                </div>
+                <div class="form-check form-check-inline custom-level-radio">
+                    <input class="form-check-input" type="radio" name="levelSelect" id="level8" value="8">
+                    <label class="form-check-label text-white-50" for="level8">8</label>
+                </div>
+                <div class="form-check form-check-inline custom-level-radio">
+                    <input class="form-check-input" type="radio" name="levelSelect" id="level9" value="9">
+                    <label class="form-check-label text-white-50" for="level9">9</label>
+                </div>
+                <div class="form-check form-check-inline custom-level-radio">
+                    <input class="form-check-input" type="radio" name="levelSelect" id="level10" value="10">
+                    <label class="form-check-label text-white-50" for="level10">10</label>
+                </div>
+                <div class="form-check form-check-inline custom-level-radio">
+                    <input class="form-check-input" type="radio" name="levelSelect" id="level11" value="11">
+                    <label class="form-check-label text-white-50" for="level11">11</label>
+                </div>
+                <div class="form-check form-check-inline custom-level-radio">
+                    <input class="form-check-input" type="radio" name="levelSelect" id="level12" value="12">
+                    <label class="form-check-label text-white-50" for="level12">12</label>
+                </div>
+                <div class="form-check form-check-inline custom-level-radio">
+                    <input class="form-check-input" type="radio" name="levelSelect" id="level13" value="13">
+                    <label class="form-check-label text-white-50" for="level13">13</label>
+                </div>
+                <div class="form-check form-check-inline custom-level-radio">
+                    <input class="form-check-input" type="radio" name="levelSelect" id="level14" value="14">
+                    <label class="form-check-label text-white-50" for="level14">14</label>
+                </div>
+                <div class="form-check form-check-inline custom-level-radio">
+                    <input class="form-check-input" type="radio" name="levelSelect" id="level15" value="15">
+                    <label class="form-check-label text-white-50" for="level15">15</label>
+                </div>
+                <div class="form-check form-check-inline custom-level-radio">
+                    <input class="form-check-input" type="radio" name="levelSelect" id="level16" value="16">
+                    <label class="form-check-label text-white-50" for="level16">16</label>
+                </div>
+            </div>
+
+            <!-- Section Title Heading -->
+            <h3 class="h5 fw-bold text-white mb-4">My Levels</h3>
+
+            <!-- Level Log Data Table -->
+            <div class="table-responsive border border-secondary rounded-2 opacity-75">
+                <table class="table table-dark table-borderless mb-0 align-middle">
+                    <thead>
+                        <tr class="border-bottom border-secondary text-white-50">
+                            <th class="p-3 fs-7 text-uppercase fw-semibold tracking-wider">User ID</th>
+                            <th class="p-3 fs-7 text-uppercase fw-semibold tracking-wider">Name</th>
+                            <th class="p-3 fs-7 text-uppercase fw-semibold tracking-wider">Downline Level</th>
+                            <th class="p-3 fs-7 text-uppercase fw-semibold tracking-wider">Investment Amount</th>
+                            <th class="p-3 fs-7 text-uppercase fw-semibold tracking-wider">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Empty State View -->
+                        <tr>
+                            <td colspan="5" class="text-start py-4 ps-3 text-muted bg-transparent">
+                                No Record Found
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>

@@ -10,15 +10,57 @@
   </div>
 
   <nav class="nav-menu" id="sidenavAccordion">
-    @for (item of menuItems; track item.route) {
-      <div class="nav-group">
-        <button class="nav-item has-dropdown" [routerLink]="[item.route]">
-          <span class="item-left">
-            <i class="bi {{ item.icon }} nav-icon"></i>
-            <span class="nav-label">{{ item.label }}</span>
-          </span>
-        </button>
-      </div>
+    @if (role === 'admin') {
+      @for (item of menuItems; track item.route) {
+        <div class="nav-group">
+          <button class="nav-item has-dropdown" [routerLink]="[item.route]">
+            <span class="item-left">
+              <i class="bi {{ item.icon }} nav-icon"></i>
+              <span class="nav-label">{{ item.label }}</span>
+            </span>
+          </button>
+        </div>
+      }
+    } @else {
+      @for (item of clientNavItems; track item.title) {
+        @if (item.children && item.children.length) {
+          <div class="nav-group client-group">
+            <button class="nav-item client-top-item is-dropdown" type="button"
+              (click)="toggleDropdown(item)"
+              [attr.aria-expanded]="isDropdownOpen(item) ? 'true' : 'false'"
+              [class.collapsed]="!isDropdownOpen(item)">
+              <span class="item-left">
+                <i class="bi {{ item.icon }} nav-icon"></i>
+                <span class="nav-label">{{ item.title }}</span>
+              </span>
+              <i class="chevron-icon">›</i>
+            </button>
+
+            <div [id]="item.title.replace(' ', '') + 'Menu'" class="accordion-collapse" [class.show]="isDropdownOpen(item)">
+              <div class="sub-menu client-sub-menu">
+                @for (child of item.children; track child.route) {
+                  <a class="sub-item client-sub-item" [routerLink]="[child.route]">
+                    <span class="sub-bullet">–</span>
+                    {{ child.label }}
+                  </a>
+                }
+              </div>
+            </div>
+          </div>
+        } @else {
+          <div class="nav-group client-group">
+            <button class="nav-item client-top-item" [routerLink]="[item.route]" [class.is-primary]="item.isPrimary">
+              <span class="item-left">
+                <i class="bi {{ item.icon }} nav-icon"></i>
+                <span class="nav-label">{{ item.title }}</span>
+              </span>
+              @if (!item.isPrimary) {
+                <i class="chevron-icon">›</i>
+              }
+            </button>
+          </div>
+        }
+      }
     }
 
     <div class="logout-section">

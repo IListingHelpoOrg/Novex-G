@@ -1,0 +1,47 @@
+<div class="dashboard-card p-4 p-sm-5" style="background: #121212; border-radius: 16px; max-width: 650px;">
+            <h2 class="h4 fw-bold mb-4 text-white">Create Ticket</h2>
+
+            <form id="create-ticket-form">
+                <div class="row g-4">
+                    <!-- Category Dropdown Selection -->
+                    <div class="col-12">
+                        <label class="form-label text-white-50 fw-medium mb-2">
+                            Category <span class="text-danger">*</span>
+                        </label>
+                        <select class="form-select form-select-lg custom-dark-input text-white-50" required>
+                            <option value="" selected disabled>-Select-</option>
+                            <option value="deposit">Deposit Issue</option>
+                            <option value="withdrawal">Withdrawal Issue</option>
+                            <option value="profile">Profile & Security</option>
+                            <option value="other">Other Inquiry</option>
+                        </select>
+                    </div>
+
+                    <!-- Subject Input -->
+                    <div class="col-12">
+                        <label class="form-label text-white-50 fw-medium mb-2">
+                            Subject <span class="text-danger">*</span>
+                        </label>
+                        <input type="text" class="form-control form-control-lg custom-dark-input"
+                            placeholder="Enter ticket subject" required>
+                    </div>
+
+                    <!-- Message Textarea -->
+                    <div class="col-12">
+                        <label class="form-label text-white-50 fw-medium mb-2">
+                            Type Message <span class="text-danger">*</span>
+                        </label>
+                        <textarea class="form-control custom-dark-input" rows="5"
+                            placeholder="Describe your issue here..." required></textarea>
+                    </div>
+
+                    <!-- Form Action Buttons -->
+                    <div class="col-12 mt-4 d-flex gap-3">
+                        <button type="submit"
+                            class="btn btn-submit-ticket px-4 py-2 fw-semibold text-white">Submit</button>
+                        <button type="button"
+                            class="btn btn-cancel-ticket px-4 py-2 fw-semibold text-white">Cancel</button>
+                    </div>
+                </div>
+            </form>
+        </div>
